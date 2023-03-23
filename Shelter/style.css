@@ -1,3 +1,4 @@
-p {
-    color: brown;
+* {
+    box-sizing: border-box;
 }
+

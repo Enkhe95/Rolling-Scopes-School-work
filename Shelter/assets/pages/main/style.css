@@ -11,6 +11,37 @@
     --сontent-color: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;;
     --button-color: #FDDCC4;
     --hover_text-color: #292929;
+/* Стили h2 */
+    --text-size-h2: 44px;
+    --line-height-h2: 57.2px;
+/* Стили h3 */
+    --text-size-h3: 35px;
+    --line-height-h3: 45.5px;
+/* Стили h4 */
+    --text-size-h4: 20px;
+    --line-height-h4: 23px;
+/* Стили h5 */
+    --text-size-h5: 15px;
+    --line-height-h5: 16.5px;
+/* Стили paragraph-l */
+    --text-size-pl: 15px;
+    --line-height-pl: 24px;
+/* Стили paragraph-s */
+    --text-size-ps: 12px;
+    --line-height-ps: 18px;
+
+/* Стили блока Our Friends */
+    --background-our-friends: #F6F6F6 ;
+    --title-color-our-friends:#545454;
+
+/* Стили блока Help */
+    --background-help:#FFFFFF;
+    --title-color-help: #545454;
+}
+
+
+html {
+    overflow-x: hidden;
 }
 
 .container {
@@ -76,6 +107,7 @@
 .nav__link:link {
     text-decoration: none;
     color:var(--nav-color);
+    transition: border 0.6s linear;
 }
 
 .nav__link:hover {
@@ -90,10 +122,11 @@
 }
 
 .chief-link:active {
-    text-decoration: underline;
-    text-decoration-color: var(--interactive-color);
-    text-decoration-thickness: 3px;
+    border-bottom: 3px solid var(--interactive-color);
+    padding-bottom: 2px;
 }
+
+
 
 /* Блок NotOnly */
 
@@ -113,8 +146,8 @@
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 44px;
-    line-height: 130%;
+    font-size: var(--text-size-h2);
+    line-height: var(--line-height-h2);
     color: var(--text--color);
 }
 
@@ -122,14 +155,14 @@
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
+    font-size: var(--text-size-pl);
+    line-height: var(--line-height-pl);
     color: var(--nav-color);
 }
 
-.not-only__dog {
+.not-only__img {
+    max-width: 698px;
     height: 728px;
-    width: 698px;
     margin-right: 40px;
 }
 
@@ -177,7 +210,7 @@
 }
 
 .about__img {
-    width: 300px;
+    max-width: 300px;
     height: 408px;
     margin-top: 80px;
     margin-left: 215px;
@@ -201,13 +234,62 @@
 }
 
 .about__text {
+    --hover_text-color: #4C4C4C;
     font-family: Arial;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
-    color:#4C4C4C;
+    color:var(--hover_text-color);
     }
 
-    
+/* Блок Our Friiends */
+.our-friends__box {
+    width: 100vw;
+    background-color: var(--background-our-friends);
+    overflow: hidden;
+}
+
+.our-friends {
+    max-width: 1280px;
+    height: 877px;
+    margin: 0 auto;
+}
+
+.our-friends__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--title-color-our-friends);
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Блок Help */
+
+.help-box {
+    width: 100vw;   
+    background-color:var(--background-help);
+}
+
+.help {
+    max-width: 1280px;
+    height: 611px;
+    margin: 0 auto;
+}
+
+.help__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--title-color-help);
+    text-align: center;
+    margin-top: 80px;
+}

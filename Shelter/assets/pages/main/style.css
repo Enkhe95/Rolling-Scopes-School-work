@@ -8,7 +8,7 @@
     --interactive-color: #F1CDB3; 
     --text--color: #FFFFFF;
     --nav-color: #CDCDCD;
-    --сontent-color: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;;
+    --сontent-color: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     --button-color: #FDDCC4;
     --hover_text-color: #292929;
 /* Стили h2 */
@@ -37,18 +37,29 @@
 /* Стили блока Help */
     --background-help:#FFFFFF;
     --title-color-help: #545454;
+
+    /* Стили блока donation */
+    --background-donation:#F6F6F6;
+    --background-card-donation: #F1CDB3;
+    --text-color-donation:#B2B2B2;
+    --title-color-donation:#545454;
+    --number-color-donation: #545454;
+
+    /* Стили блока footer */
+    --color-title-footer:#FFFFFF;
+    --color-text-footer: #F1CDB3;
 }
 
 
 html {
     overflow-x: hidden;
+    cursor: url(/assets/img/Union.png) 2 2,default;
 }
 
 .container {
     width: 100vw;
     background: var(--сontent-color);
     overflow: hidden;
-    cursor: url(./img/Union.png) 2 2,default;
 }
 
 /* Стили Header */
@@ -112,7 +123,7 @@ html {
 
 .nav__link:hover {
     color:var(--text--color);
-    cursor: url(./img/Vector.png) 2 2, default;
+    cursor: url(/assets/img/Vector.png) 2 2, default;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -182,7 +193,7 @@ html {
 }
 
 .not-only__button:hover {
-    cursor: url(./img/icon-button.png) 2 2, default;
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
     background-color: var(--button-color);
 }
 
@@ -330,4 +341,170 @@ html {
     line-height: var(--line-height-h4);
     letter-spacing: 0.06em;
     color: var(--title-color-help);
+}
+
+
+/* Блок Donation */
+
+.donation-box {
+    width: 100vw;
+    background-color: var(--background-donation);
+}
+
+.donation {
+    width: 1280px;
+    height: 462px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 30px;
+}
+
+.donation__img {
+    width: 505px;
+    height: 261px;
+}
+
+.donation__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.donation__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--title-color-donation);
+}
+
+.donation__subtitle {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h5);
+    line-height: var(--line-height-h5);
+    letter-spacing: 0.06em;
+    color: var(--title-color-donation);
+}
+
+.donation__card-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 349px;
+    height: 43px;
+    background-color: var(--background-card-donation);
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.card-img {
+    width: 30px;
+    height: 23px;
+    margin-left: 15px;
+}
+
+.card-number {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--number-color-donation);
+    letter-spacing: 0.06em;
+}
+
+.donation__card-link:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--button-color);
+}
+
+.donation__attention-text {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-color-donation);
+}
+
+/* Блок Footer */
+
+.footer-box {
+    width: 100vw;
+    background: var(--сontent-color);
+}
+
+.footer {
+    max-width: 1280px;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 160px;
+}
+
+.footer__first-block {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 40px;
+}
+
+.footer__second-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 34px;
+}
+
+.footer__title-block {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--color-title-footer);
+}
+
+.footer__first-block > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+
+.footer__second-block > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.footer-img {
+    width: 300px;
+    height: 310px;
+    margin-top: 40px;
+}
+
+.email__text, .phone-number__text, .adress__text {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h4);
+    line-height: var(--line-height-h4);
+    letter-spacing: 0.06em;
+    color: var(--color-text-footer);
 }

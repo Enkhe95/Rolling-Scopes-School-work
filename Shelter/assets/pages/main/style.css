@@ -98,6 +98,10 @@ html {
     text-decoration: none;
 }
 
+.logo_link:hover {
+    cursor: url(/assets/img/Vector.png) 2 2, default;
+}
+
 .logo__subtitle {
     color: var(--text--color);
     font-family: Arial, Helvetica, sans-serif;
@@ -342,7 +346,6 @@ background-color: #F1CDB3;
 }
 
 .pets__card:hover {
-
     color: white;
     transform: scale(1.03);
     box-shadow: -10px 10px 10px 10px rgba(41, 41, 41, 0.6);
@@ -646,9 +649,9 @@ background-color: var(--button-color);
 }
 
 .footer__first-block > a:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(/assets/img/Vector.png) 2 2, default;
 }
 
 .footer__second-block > a:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(/assets/img/Vector.png) 2 2, default;
 }

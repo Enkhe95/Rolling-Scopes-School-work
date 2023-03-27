@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    cursor: url(/assets/img/Union.png) 2 2,default;
+}
+
+:root {
+    /* Стили шрифтов */
+/* Стили h2 */
+    --text-size-h2: 44px;
+    --line-height-h2: 57.2px;
+/* Стили h3 */
+    --text-size-h3: 35px;
+    --line-height-h3: 45.5px;
+/* Стили h4 */
+    --text-size-h4: 20px;
+    --line-height-h4: 23px;
+/* Стили h5 */
+    --text-size-h5: 15px;
+    --line-height-h5: 16.5px;
+/* Стили paragraph-l */
+    --text-size-pl: 15px;
+    --line-height-pl: 24px;
+/* Стили paragraph-s */
+    --text-size-ps: 12px;
+    --line-height-ps: 18px;
+
+/* Стили header */
+    --background-header: #FFFFFF;
+    --background-hr: #F1CDB3;
+    --color-text-header: #545454;
+
+/* Стили our-friends */
+    --background-our-friends: #F6F6F6;
+    --color-button: #F1CDB3;
+    --background-button:#FFFFFF;
+
+
+    /* Стили footer */
+    --background-footer:url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+/* Стили Header */
+.container {
+    width: 100vw;
+    background: var(--background-header);
+}
+
+.header{
+    max-width: 1280px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.header-container {
+    height: 120px;
+    display: flex;
+    gap: 573px;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.logo__title {
+    color: var(--color-text-header);
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.logo__link {
+    text-decoration: none;
+}
+
+.logo__link:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    color: black;
+    transition: 0.3s;
+}
+
+.logo__subtitle {
+    color: var(--color-text-header);
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.header-nav__items {
+    list-style-type: none;
+    display: flex;
+    margin-top: 46px;
+    margin-right: 40px;
+    gap: 35px;
+}
+
+.header-nav__subitems {
+    color:var(--color-text-header);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.nav__strip {
+    width: 58px;
+    height: 3px;
+    background-color: #F1CDB3;
+    margin-top: 3px;
+    border: none;
+    }
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-text-header);
+}
+
+.nav__link:hover {
+    color: black;
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+
+.nav__link:visited {
+    color:black;
+}
+
+
+/* Блок Our Friiends */
+.our-friends__box {
+    width: 100vw;
+    background-color: var(--background-our-friends);
+}
+
+.our-friends {
+    max-width: 1280px;
+    height: 1342px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 45px;
+}
+
+.our-friends__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--color-text-header);
+    text-align: center;
+}
+
+
+.pets__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 30px;
+}
+
+.pets__first-box {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 40px;
+}
+
+.pets__second-box {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 40px;
+}
+
+
+.pets__card {
+    width: 270px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--background-our-friends);
+    border-radius: 9px;
+}
+
+.pets__card:hover {
+    transform: scale(1.03);
+    box-shadow: -10px 10px rgba(41, 41, 41, 0.6);
+    transition: 0.5s;
+}
+
+.pets__card_title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-header);
+}
+
+.pets__card_button{
+    width: 187px;
+    height: 52px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: var(--background-card-pets);
+}
+
+.pets__card_button:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
+    transition: 0.3s;
+}
+.pets__card_button:active {
+background-color: var(--background-hr);
+}
+
+.our-friends__button-right {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-button);
+    border-radius: 100px;
+    background-color: var(--background-button);
+    transform: rotate(-180deg);
+}
+
+.our-friends__button-center {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-button);
+    border-radius: 100px;
+    background-color: var(--background-button);
+}
+
+.our-friends__button-left {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--color-button);
+    border-radius: 100px;
+    background-color: var(--background-button);
+}
+
+
+.our-friends__button-center:hover{
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--background-hr);
+    transition: 0.2s;
+}
+
+.our-friends__button-center:active {
+    background-color: var(--background-button);
+    transition: 0.2s;
+}
+
+.our-friends__button-left:hover{
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--background-hr);
+    transition: 0.2s;
+}
+
+.our-friends__button-left:active {
+    background-color: var(--background-button);
+    transition: 0.2s;
+}
+
+.our-friends__button-right:hover{
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--background-hr);
+    transition: 0.2s;
+}
+
+.our-friends__button-right:active {
+    background-color: var(--background-button);
+    transition: 0.2s;
+}
+
+
+/* Cтили Footer */
+
+.footer-box {
+    width: 100vw;
+    background: var(--background-footer);
+}
+
+.footer {
+    max-width: 1280px;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 160px;
+}
+
+.footer__first-block {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 40px;
+}
+
+.footer__second-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 34px;
+}
+
+.footer__title-block {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: 0.06em;
+    color: var(--background-header);
+}
+
+.footer__first-block > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+
+.footer__second-block > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.footer-img {
+    width: 300px;
+    height: 310px;
+    margin-top: 40px;
+}
+
+.email__text, .phone-number__text, .adress__text {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-size-h4);
+    line-height: var(--line-height-h4);
+    letter-spacing: 0.06em;
+    color: var(--background-hr);
+}
+
+.footer__first-block > a:hover {
+    cursor: url(/assets/img/Vector.png) 2 2, default;
+}
+
+.footer__second-block > a:hover {
+    cursor: url(/assets/img/Vector.png) 2 2, default;
+}

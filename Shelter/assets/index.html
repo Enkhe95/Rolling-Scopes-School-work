@@ -15,22 +15,22 @@
       <header class="header">
         <div class="header-container">
           <div class="logo">
-            <h1 class="logo__title">Cozy House</h1>
-            <h2 class="logo__subtitle">Shelter for pets in Boston</h2>
+            <a href="#" class="logo_link"><h1 class="logo__title">Cozy House</h1>
+            <h2 class="logo__subtitle">Shelter for pets in Boston</h2></a>
           </div>
           <nav class="header-nav">
             <ul class="header-nav__items">
               <li class="header-nav__subitems">
-                <a class="nav__link chief-link" href="#"> About the shelter </a>
+                <a class="nav__link" href="#"> About the shelter <hr class="nav__strip"> </a>
               </li>
               <li class="header-nav__subitems">
                 <a class="nav__link" href="#">Our pets</a>
               </li>
               <li class="header-nav__subitems">
-                <a class="nav__link" href="#">Help the shelter</a>
+                <a class="nav__link" href="#help">Help the shelter</a>
               </li>
               <li class="header-nav__subitems">
-                <a class="nav__link" href="#">Contacts</a>
+                <a class="nav__link" href="#footer">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -65,6 +65,7 @@
     <!-- Основной блок Main  -->
 
     <main class="main">
+ 
       <!-- Блок About -->
 
       <div class="about-box">
@@ -105,17 +106,49 @@
 
       <!-- Блок Our Friends -->
 
-      <div class="our-friends__box">
+      <div class="our-friends__box" id="friends-pets">
         <section class="our-friends">
           <h2 class="our-friends__title">
             Our friends who <br />
             are looking for a house
           </h2>
+
+          <div class="our-friends__card">
+            <button class="button__arrow">
+              <img src="./icons/Arrow-left.svg" alt="arrow">
+            </button>
+             
+            <div class="pets__container">
+            <div class="pets__card">
+              <img class="pets__card_img" src="./img/pets-katrine.png" alt="pets">
+              <h2 class="pets__card_title">Katrine</h2>
+              <button class="pets__card_button">Learn more</button>
+            </div>
+            
+            <div class="pets__card">
+              <img class="pets__card_img" src="./img/pets-jennifer.png" alt="pets">
+              <h2 class="pets__card_title">Jennifer</h2>
+              <button class="pets__card_button">Learn more</button>
+            </div>
+
+            <div class="pets__card">
+              <img class="pets__card_img" src="./img/pets-woody.png" alt="pets">
+              <h2 class="pets__card_title">Woody</h2>
+              <button class="pets__card_button">Learn more</button>
+            </div>
+            </div>
+
+            <button class="button__arrow">
+              <img src="./icons/Arrow-right.svg" alt="arrow">
+            </button>
+          </div>
+
+          <button class="our-friends__button">Get to know the rest</button>
         </section>
       </div>
 
       <!-- Блок Help -->
-      <div class="help-box">
+      <div class="help-box" id="help">
         <section class="help">
           <h2 class="help__title">
             How you can help <br />
@@ -226,7 +259,7 @@
       </div>
 
 <!-- Блок Footer -->
-      <div class="footer-box">
+      <div class="footer-box" id="footer">
         <footer class="footer">
 
           <div class="footer__first-block">
@@ -237,7 +270,7 @@
               <p class="email__text">email@shelter.com</p>
             </a>
 
-            <a class="phone-number" href="tel:+13 674 567 75 54">
+            <a class="phone-number" href="tel:+136745677554">
               <img class="phone-number__icon" src="./icons/icon-phone.svg" alt="phone-number">
               <p class="phone-number__text">+13 674 567 75 54</p>
             </a>

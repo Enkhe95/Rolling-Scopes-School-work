@@ -33,6 +33,10 @@
 /* Стили блока Our Friends */
     --background-our-friends: #F6F6F6 ;
     --title-color-our-friends:#545454;
+    --background-card-pets:#FAFAFA;
+    --background-button-pets:#F1CDB3;
+    --background-button-our-friends:#F1CDB3;
+    --color-text-button-pets:#F1CDB3;
 
 /* Стили блока Help */
     --background-help:#FFFFFF;
@@ -52,6 +56,7 @@
 
 
 html {
+    scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: url(/assets/img/Union.png) 2 2,default;
 }
@@ -89,6 +94,10 @@ html {
     letter-spacing: 6%;
 }
 
+.logo_link {
+    text-decoration: none;
+}
+
 .logo__subtitle {
     color: var(--text--color);
     font-family: Arial, Helvetica, sans-serif;
@@ -115,6 +124,13 @@ html {
     font-style: normal;
 }
 
+.nav__strip {
+    width: 114px;
+    height: 3px;
+    background-color: #F1CDB3;
+    margin-top: 3px;
+    }
+
 .nav__link:link {
     text-decoration: none;
     color:var(--nav-color);
@@ -132,10 +148,6 @@ html {
     color:var(--text--color);
 }
 
-.chief-link:active {
-    border-bottom: 3px solid var(--interactive-color);
-    padding-bottom: 2px;
-}
 
 
 
@@ -191,6 +203,7 @@ html {
     border-radius: 100px;
     border: none;
 }
+
 
 .not-only__button:hover {
     cursor: url(/assets/img/icon-button.png) 2 2, default;
@@ -266,6 +279,11 @@ html {
     max-width: 1280px;
     height: 877px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 60px;
 }
 
 .our-friends__title {
@@ -277,8 +295,126 @@ html {
     letter-spacing: 0.06em;
     color: var(--title-color-our-friends);
     text-align: center;
-    margin-top: 80px;
 }
+
+.our-friends__card {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 90px;
+}
+
+.pets__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 53px;
+}
+
+.button__arrow{
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.button__arrow:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--text--color);
+    box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
+    transition: 0.2s;
+
+}
+.button__arrow:active {
+background-color: #F1CDB3;
+}
+
+.pets__card {
+    width: 270px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--background-card-pets);
+    border-radius: 9px;
+}
+
+.pets__card:hover {
+
+    color: white;
+    transform: scale(1.03);
+    box-shadow: -10px 10px 10px 10px rgba(41, 41, 41, 0.6);
+    transition: 0.5s;
+}
+
+.pets__card_title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: var(--title-color-our-friends);
+}
+
+.pets__card_button{
+    width: 187px;
+    height: 52px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: var(--background-card-pets);
+}
+
+.pets__card_button:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--text--color);
+    box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
+    transition: 0.3s;
+}
+.pets__card_button:active {
+background-color: var(--button-color);
+}
+
+.our-friends__button {
+    width: 261px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: var(--background-button-our-friends);
+    border: none;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;;
+}
+
+.our-friends__button:hover{
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    background-color: var(--button-color);
+    box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
+    transition: 0.5s;
+}
+
+.our-friends__button:active {
+    background-color: var(--text--color);
+    border-color: var(--button-color);
+    border-width: 2px;
+    border-style: solid;
+    color: var(--hover_text-color);
+}
+
+
 
 /* Блок Help */
 
@@ -507,4 +643,12 @@ html {
     line-height: var(--line-height-h4);
     letter-spacing: 0.06em;
     color: var(--color-text-footer);
+}
+
+.footer__first-block > a:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
+}
+
+.footer__second-block > a:hover {
+    cursor: url(/assets/img/icon-button.png) 2 2, default;
 }

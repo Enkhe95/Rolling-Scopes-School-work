@@ -1,2 +1,2 @@
 
-https://rolling-scopes-school.github.io/enkhe95-JSFE2023Q1/shelter/assets/index.html
+https://rolling-scopes-school.github.io/enkhe95-JSFE2023Q1/Shelter/assets/index.html

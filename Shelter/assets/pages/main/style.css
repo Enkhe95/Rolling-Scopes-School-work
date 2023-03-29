@@ -58,7 +58,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    cursor: url(/assets/img/Union.png) 2 2,default;
+    cursor: url(../../img/Union.png) 2 2,default;
 }
 
 .container {
@@ -99,7 +99,7 @@ html {
 }
 
 .logo_link:hover {
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
 }
 
 .logo__subtitle {
@@ -143,7 +143,7 @@ html {
 
 .nav__link:hover {
     color:var(--text--color);
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -210,7 +210,7 @@ html {
 
 
 .not-only__button:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--button-color);
 }
 
@@ -323,7 +323,7 @@ html {
 }
 
 .button__arrow:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--text--color);
     box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
     transition: 0.2s;
@@ -378,7 +378,7 @@ background-color: #F1CDB3;
 }
 
 .pets__card_button:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--text--color);
     box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
     transition: 0.3s;
@@ -403,7 +403,7 @@ background-color: var(--button-color);
 }
 
 .our-friends__button:hover{
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--button-color);
     box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
     transition: 0.5s;
@@ -561,7 +561,7 @@ background-color: var(--button-color);
 }
 
 .donation__card-link:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--button-color);
 }
 
@@ -649,9 +649,9 @@ background-color: var(--button-color);
 }
 
 .footer__first-block > a:hover {
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
 }
 
 .footer__second-block > a:hover {
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
 }

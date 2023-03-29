@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    cursor: url(/assets/img/Union.png) 2 2,default;
+    cursor: url(../../img/Union.png) 2 2,default;
 }
 
 :root {
@@ -84,7 +84,7 @@ html {
 }
 
 .logo__link:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     color: black;
     transition: 0.3s;
 }
@@ -130,7 +130,7 @@ html {
 
 .nav__link:hover {
     color: black;
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     text-decoration: none;
     transition: 0.5s;
     
@@ -237,7 +237,7 @@ html {
 }
 
 .pets__card_button:hover {
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     box-shadow: -5px 5px 5px 5px rgba(41, 41, 41, 0.6);
     transition: 0.3s;
 }
@@ -248,9 +248,9 @@ background-color: var(--background-hr);
 .our-friends__button-right {
     width: 52px;
     height: 52px;
-    border: 2px solid var(--color-button);
+    border: 2px solid #CDCDCD;
     border-radius: 100px;
-    background-color: var(--background-button);
+    background-color: #CDCDCD;
     transform: rotate(-180deg);
 }
 
@@ -270,9 +270,12 @@ background-color: var(--background-hr);
     background-color: var(--background-button);
 }
 
+.our-friends__button-right:hover {
+    cursor: url(../../img/icon-button.png) 2 2, default;
+}
 
 .our-friends__button-center:hover{
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--background-hr);
     transition: 0.2s;
 }
@@ -283,23 +286,12 @@ background-color: var(--background-hr);
 }
 
 .our-friends__button-left:hover{
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
+    cursor: url(../../img/icon-button.png) 2 2, default;
     background-color: var(--background-hr);
     transition: 0.2s;
 }
 
 .our-friends__button-left:active {
-    background-color: var(--background-button);
-    transition: 0.2s;
-}
-
-.our-friends__button-right:hover{
-    cursor: url(/assets/img/icon-button.png) 2 2, default;
-    background-color: var(--background-hr);
-    transition: 0.2s;
-}
-
-.our-friends__button-right:active {
     background-color: var(--background-button);
     transition: 0.2s;
 }
@@ -380,9 +372,9 @@ background-color: var(--background-hr);
 }
 
 .footer__first-block > a:hover {
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
 }
 
 .footer__second-block > a:hover {
-    cursor: url(/assets/img/Vector.png) 2 2, default;
+    cursor: url(../../img/Vector.png) 2 2, default;
 }

@@ -18,7 +18,7 @@
     --text-size-h3: 3.5rem;
     --line-height-h3: 4.55rem;
 /* Стили h4 */
-    --text-size-h4: 2rem;
+    --text-size-h4: 2.4rem;
     --line-height-h4: 2.3rem;
 /* Стили h5 */
     --text-size-h5: 1.5rem;
@@ -114,6 +114,10 @@ html {
     margin-left: 14px;
 }
 
+input, label {
+    display: none;
+}
+
 .header-nav__items {
     list-style-type: none;
     display: flex;
@@ -190,9 +194,8 @@ html {
 }
 
 .not-only__img {
-    max-width: 698px;
-    width: 100%;
-    height: 728px;
+    max-width: 100%;
+    height: 100%;
     margin-right: 40px;
     margin-top: 90px;
 }
@@ -242,7 +245,7 @@ html {
 }
 
 .about__img {
-    max-width: 300px;
+    max-width: 100%;
     height: 408px;
     margin-top: 80px;
     margin-left: 215px;
@@ -719,7 +722,7 @@ background-color: var(--button-color);
 }
 
 .about__content {
-    margin-top: 55px;
+    margin-top: 0px;
 }
 
 .about__img {
@@ -797,7 +800,259 @@ background-color: var(--button-color);
 }
 
 @media (max-width: 768px) {
-    .header-nav {
-        display: none;
-    }
+
+/* Блок Header */
+.header-nav {
+    display: none;
+}
+
+.header {
+    max-width: 100%;
+    height: 823px;
+}
+
+.header-container {
+    height: 90px;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo__subtitle {
+    font-style: normal;
+    line-height: 15px;
+    letter-spacing: 0.1rem;
+    margin-left: 0px;
+}
+
+/* Блок Not-only */
+
+.not-only {
+    height: 673px;
+    text-align: center;
+    display: inline-block;
+}
+
+.not-only__container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 105px;
+}
+
+.not-only__title {
+    font-size: var(--text-size-h4);
+    letter-spacing: 0.06rem;
+    line-height: 130%;
+}
+
+.about__text > br {
+    display: none;
+}
+.not-only__text {
+    text-align: justify;
+}
+
+.not-only__img {
+    max-width: 83%;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+/* Блок About */
+
+.about {
+    height: 974px;
+    gap:42px;
+}
+
+.about__content {
+    margin: 0px 25px 0px 25px;
+}
+
+.about__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06rem;
+    text-align: center;
+}
+
+.about__text {
+    text-align: justify;
+}
+
+.about__img {
+    max-width: 85vw;
+    height: auto;
+}
+
+/* Блок our-friends */
+.our-friends {
+    max-width: 100%;
+    height: 791px;
+    gap: 42px;
+}
+
+.our-friends__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.our-friends__card {
+    width: 270px;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.jennifer-pets {
+    display: none;
+}
+
+.button__arrow {
+    order: 1;
+}
+
+.arrow-left {
+    margin-right: 30px;
+}
+
+.arrow-right {
+    margin-left: 30px;
+}
+
+/* Блок Help */
+.help {
+    max-width: 100%;
+    height: 745px;
+}
+
+.help__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    margin-top: 42px;
+}
+
+.help__icons-list {
+    width: 290px;
+    height: 555px;
+    gap: 30px;
+}
+
+.help__icons > img {
+    width: 50px;
+    height: 50px;
+}
+
+.help__icons-name {
+    font-size: var(--text-size-h5);
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.last__icons {
+    margin-right: 160px;
+}
+
+.help__icons {
+    min-width: 130px;
+    height: 87px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* Блок Donation */
+.donation {
+    max-width: 100%;
+    height: 542px;
+    gap: 42px;
+}
+
+.donation__content {
+    align-items: center;
+}
+
+.donation__title {
+    text-align: center;
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.donation__subtitle {
+    text-align: center;
+    font-size: var(--text-size-h5);
+    line-height: 160%;
+    letter-spacing: 0px;
+}
+
+.donation__card-link {
+    width: 281px;
+    height: 43px;
+}
+
+.card-img {
+    width: 30px;
+    height: 23px;
+}
+
+.card-number {
+    font-size: var(--text-size-h5);
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.donation__attention-text {
+    font-size: var(--text-size-ps);
+    line-height: var(--line-height-ps);
+    margin: 0px 20px 0px 20px;
+}
+.donation__attention-text > br {
+    display: none;
+}
+
+.donation__img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Блок Footer */
+
+.footer {
+    max-width: 100%;
+    height: 809px;
+    gap: 40px;
+}
+
+.footer__first-block {
+    text-align: center;
+}
+
+.footer__second-block {
+    text-align: center;
+    gap: 40px;
+}
+
+.footer__title-block {
+    text-align: center;
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+}
+
+.email__text, .phone-number, .adress__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+.footer-img {
+    max-width: 65%;
+    height: auto;
+}
+
+
 }

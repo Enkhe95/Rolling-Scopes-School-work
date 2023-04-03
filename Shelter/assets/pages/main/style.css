@@ -12,23 +12,23 @@
     --button-color: #FDDCC4;
     --hover_text-color: #292929;
 /* Стили h2 */
-    --text-size-h2: 44px;
-    --line-height-h2: 57.2px;
+    --text-size-h2: 4.4rem;
+    --line-height-h2: 5.72rem;
 /* Стили h3 */
-    --text-size-h3: 35px;
-    --line-height-h3: 45.5px;
+    --text-size-h3: 3.5rem;
+    --line-height-h3: 4.55rem;
 /* Стили h4 */
-    --text-size-h4: 20px;
-    --line-height-h4: 23px;
+    --text-size-h4: 2.4rem;
+    --line-height-h4: 2.3rem;
 /* Стили h5 */
-    --text-size-h5: 15px;
-    --line-height-h5: 16.5px;
+    --text-size-h5: 1.5rem;
+    --line-height-h5: 1.65rem;
 /* Стили paragraph-l */
-    --text-size-pl: 15px;
-    --line-height-pl: 24px;
+    --text-size-pl: 1.5rem;
+    --line-height-pl: 2.4rem;
 /* Стили paragraph-s */
-    --text-size-ps: 12px;
-    --line-height-ps: 18px;
+    --text-size-ps: 1.2rem;
+    --line-height-ps: 1.8rem;
 
 /* Стили блока Our Friends */
     --background-our-friends: #F6F6F6 ;
@@ -56,6 +56,7 @@
 
 
 html {
+    font-size: 10px;
     scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: url(../../img/Union.png) 2 2,default;
@@ -76,9 +77,10 @@ html {
 }
 
 .header-container {
-    height: 180px;
+    height: 90px;
     display: flex;
-    gap: 573px;
+    justify-content: space-between;
+    align-items:center;
 }
 
 .logo {
@@ -110,6 +112,10 @@ html {
     letter-spacing: 10%;
     margin-top: 10px;
     margin-left: 14px;
+}
+
+input, label {
+    display: none;
 }
 
 .header-nav__items {
@@ -188,9 +194,10 @@ html {
 }
 
 .not-only__img {
-    max-width: 698px;
-    height: 728px;
+    max-width: 100%;
+    height: 100%;
     margin-right: 40px;
+    margin-top: 90px;
 }
 
 .not-only__button {
@@ -238,7 +245,7 @@ html {
 }
 
 .about__img {
-    max-width: 300px;
+    max-width: 100%;
     height: 408px;
     margin-top: 80px;
     margin-left: 215px;
@@ -348,7 +355,7 @@ background-color: #F1CDB3;
 .pets__card:hover {
     color: white;
     transform: scale(1.03);
-    box-shadow: -10px 10px 10px 10px rgba(41, 41, 41, 0.6);
+    box-shadow: -10px 10px 10px 10px rgba(41, 41, 41, 0.2);
     transition: 0.5s;
 }
 
@@ -446,14 +453,14 @@ background-color: var(--button-color);
 
 .help__icons-box {
     display: flex;
-    flex-direction: column;
-    gap: 55px;
     margin-top: 60px;
 }
 
 .help__icons-list {
+    max-width: 100%;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 120px;
@@ -465,6 +472,7 @@ background-color: var(--button-color);
 }
 
 .help__icons {
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -554,7 +562,7 @@ background-color: var(--button-color);
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: var(--text-size-h4);
+    font-size: 2rem;
     line-height: var(--line-height-h4);
     color: var(--number-color-donation);
     letter-spacing: 0.06em;
@@ -655,3 +663,505 @@ background-color: var(--button-color);
 .footer__second-block > a:hover {
     cursor: url(../../img/Vector.png) 2 2, default;
 }
+
+
+@media (max-width:1279px) {
+/* Блок Header */
+.header {
+    height: 1165px;
+}
+
+.header-container {
+    height: 90px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.header-nav__items {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+/* Блок not-only */
+.not-only {
+    width: 100%;
+    height: 1165px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.not-only__container {
+    margin: 60px 154px 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.not-only__button {
+    margin: 0 auto;
+}
+
+.not-only__img {
+    width: 569px;
+    height: 593px;
+    margin-left: 169px;
+    margin-right: 30px;
+    margin-top: 0px;
+}
+
+/* Блок About */
+
+.about {
+    height: 1048px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.about__content {
+    margin-top: 0px;
+}
+
+.about__img {
+    width: 300px;
+    height: 408px;
+    margin: 0;
+}
+
+/* Блок Our Friends */
+.our-friends {
+    height: 877px;
+}
+
+.woody-pets {
+    display: none;
+}
+
+.our-friends__card {
+    gap: 12px;
+}
+
+/* Блок Help */
+
+.help {
+    max-width: 100%;
+    height: 779px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.help__icons-box {
+    max-width: 630px;
+}
+
+.help__icons-list {
+    gap: 55px;
+}
+.help__icons {
+    min-width: 170px;
+}
+
+.help__icons-name {
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+
+/* Блок Donation */
+.donation {
+    width: 100%;
+    height: 783px;
+    flex-direction: column-reverse;
+    gap: 60px;
+}
+
+/* Блок Footer */
+.footer {
+    width: 70%;
+    height: 639px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+.footer__first-block {
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.footer__second-block {
+    margin-top: 30px;
+    gap: 33px;
+}
+
+.footer-img {
+    margin: 0px;
+}
+}
+
+@media (max-width: 768px) {
+
+/* Блок Header */
+.header-nav {
+    display: none;
+}
+
+.header-nav__items {
+    height: 823px;
+    width: 320px;
+    right: 1px;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#292929;
+    margin: 0px;
+    font-size: 3.2rem;
+    position: absolute;
+    z-index: 1;
+}
+.nav__link {
+    color:#CDCDCD;
+    font-size: 3.2rem;
+}
+.nav__link:visited {
+    color:#CDCDCD;
+}
+
+label {
+    display: block;
+    top: 30px;
+    right: 25px;
+    order: 1;
+    position: absolute;
+    z-index: 2;
+}
+
+input {
+    display: none;
+}
+
+[for=burger]::before {
+    content: '☰';
+    font-size: 3.5rem;
+    color: var(--interactive-color);
+}
+
+ #burger:checked + label + nav {
+    display: block;
+    animation: show .5s ease;
+}
+#burger:checked + label::before {
+    content: '∣∣∣';
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--interactive-color);
+}
+
+@keyframes show {
+    0% {
+opacity: 0;
+    }
+    100% {
+opacity: 1;
+    }
+}
+
+.burger-icons {
+    font-size: 3.5rem;
+    color: #000000;
+}
+
+
+.header {
+    max-width: 100%;
+    height: 823px;
+}
+
+.header-container {
+    max-width: 100%;
+    height: 120px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    margin-left: 20px;
+    position: absolute;
+    z-index: 0;
+    
+}
+
+.logo__subtitle {
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin-left: 0px;
+}
+
+.not-only__title > br {
+    display: block;
+}
+
+.nav__strip {
+    width: 243px;
+}
+
+/* Блок Not-only */
+
+.not-only {
+    height: 673px;
+    text-align: center;
+    display: inline-block;
+}
+
+.not-only__container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 105px;
+}
+
+.not-only__title {
+    font-size: var(--text-size-h4);
+    letter-spacing: 0.06rem;
+    line-height: 130%;
+}
+
+.about__text > br {
+    display: none;
+}
+.not-only__text {
+    text-align: justify;
+}
+
+.not-only__img {
+    max-width: 83%;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+/* Блок About */
+
+.about {
+    height: 974px;
+    gap:42px;
+}
+
+.about__content {
+    margin: 0px 25px 0px 25px;
+}
+
+.about__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06rem;
+    text-align: center;
+}
+
+.about__text {
+    text-align: justify;
+}
+
+.about__img {
+    max-width: 85vw;
+    height: auto;
+}
+
+/* Блок our-friends */
+.our-friends {
+    max-width: 100%;
+    height: 791px;
+    gap: 42px;
+}
+
+.our-friends__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.our-friends__card {
+    width: 270px;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.jennifer-pets {
+    display: none;
+}
+
+.button__arrow {
+    order: 1;
+}
+
+.arrow-left {
+    margin-right: 30px;
+}
+
+.arrow-right {
+    margin-left: 30px;
+}
+
+/* Блок Help */
+.help {
+    max-width: 100%;
+    height: 745px;
+}
+
+.help__title {
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    margin-top: 42px;
+}
+
+.help__icons-list {
+    width: 290px;
+    height: 555px;
+    gap: 30px;
+}
+
+.help__icons > img {
+    width: 50px;
+    height: 50px;
+}
+
+.help__icons-name {
+    font-size: var(--text-size-h5);
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.last__icons {
+    margin-right: 160px;
+}
+
+.help__icons {
+    min-width: 130px;
+    height: 87px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* Блок Donation */
+.donation {
+    max-width: 100%;
+    height: 542px;
+    gap: 42px;
+}
+
+.donation__content {
+    align-items: center;
+}
+
+.donation__title {
+    text-align: center;
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.donation__subtitle {
+    text-align: center;
+    font-size: var(--text-size-h5);
+    line-height: 160%;
+    letter-spacing: 0px;
+}
+
+.donation__card-link {
+    width: 281px;
+    height: 43px;
+}
+
+.card-img {
+    width: 30px;
+    height: 23px;
+}
+
+.card-number {
+    font-size: var(--text-size-h5);
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.donation__attention-text {
+    font-size: var(--text-size-ps);
+    line-height: var(--line-height-ps);
+    margin: 0px 20px 0px 20px;
+}
+.donation__attention-text > br {
+    display: none;
+}
+
+.donation__img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Блок Footer */
+
+.footer {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 809px;
+    gap: 40px;
+}
+
+br {
+    display: none;
+}
+
+.footer__second-block {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.footer__title-block {
+    text-align: center;
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+}
+
+.email__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06rem;
+}
+
+.phone-number__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06rem;
+}
+
+.adress__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.04em;
+}
+
+.footer__second-block > a {
+    justify-content: center;
+}
+
+.footer-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+}
+

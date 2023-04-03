@@ -8,28 +8,29 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: url(../../img/Union.png) 2 2,default;
+    font-size: 10px;
 }
 
 :root {
     /* Стили шрифтов */
 /* Стили h2 */
-    --text-size-h2: 44px;
-    --line-height-h2: 57.2px;
+    --text-size-h2: 4.4rem;
+    --line-height-h2: 5.72rem;
 /* Стили h3 */
-    --text-size-h3: 35px;
-    --line-height-h3: 45.5px;
+    --text-size-h3: 3.5rem;
+    --line-height-h3: 4.55rem;
 /* Стили h4 */
-    --text-size-h4: 20px;
-    --line-height-h4: 23px;
+    --text-size-h4: 2rem;
+    --line-height-h4: 2.3rem;
 /* Стили h5 */
-    --text-size-h5: 15px;
-    --line-height-h5: 16.5px;
+    --text-size-h5: 1.5rem;
+    --line-height-h5: 1.65rem;
 /* Стили paragraph-l */
-    --text-size-pl: 15px;
-    --line-height-pl: 24px;
+    --text-size-pl: 1.5rem;
+    --line-height-pl: 2.4rem;
 /* Стили paragraph-s */
-    --text-size-ps: 12px;
-    --line-height-ps: 18px;
+    --text-size-ps: 1.2rem;
+    --line-height-ps: 1.8rem;
 
 /* Стили header */
     --background-header: #FFFFFF;
@@ -59,9 +60,10 @@ html {
 }
 
 .header-container {
-    height: 120px;
+    height: 90px;
     display: flex;
-    gap: 573px;
+    justify-content: space-between;
+    align-items:center;
 }
 
 .logo {
@@ -94,10 +96,15 @@ html {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     letter-spacing: 0.1em;
 }
+
+label, input {
+    display: none;
+}
+
 
 .header-nav__items {
     list-style-type: none;
@@ -111,7 +118,7 @@ html {
     color:var(--color-text-header);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-style: normal;
 }
 
@@ -172,26 +179,11 @@ html {
 
 .pets__container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items:center;
     gap: 30px;
 }
-
-.pets__first-box {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    gap: 40px;
-}
-
-.pets__second-box {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    gap: 40px;
-}
-
 
 .pets__card {
     width: 270px;
@@ -207,7 +199,7 @@ html {
 
 .pets__card:hover {
     transform: scale(1.03);
-    box-shadow: -10px 10px rgba(41, 41, 41, 0.6);
+    box-shadow: -10px 10px rgba(41, 41, 41, 0.2);
     transition: 0.5s;
 }
 
@@ -215,8 +207,8 @@ html {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 2rem;
+    line-height: 2.3rem;
     letter-spacing: 0.06em;
     color: var(--color-text-header);
 }
@@ -227,7 +219,7 @@ html {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.7rem;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
@@ -377,4 +369,229 @@ background-color: var(--background-hr);
 
 .footer__second-block > a:hover {
     cursor: url(../../img/Vector.png) 2 2, default;
+}
+
+
+@media only screen and (max-width:1279px) {
+
+/* Блок header */
+.header-container {
+    height: 90px;
+}
+
+/* Блок our-friends */
+
+.our-friends {
+    width: 768px;
+    height: 1733px;
+}
+
+.pets__container {
+    flex-direction: row;
+}
+
+
+.timmy-pet, .sophia-pet {
+    display: none;
+}
+
+/* Блок Footer */
+.footer {
+    width: 70%;
+    height: 639px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+.footer__first-block {
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.footer__second-block {
+    margin-top: 30px;
+    gap: 33px;
+}
+
+.footer-img {
+    margin: 0px;
+}
+}
+
+@media (max-width: 768px) {
+
+    /* Блок Header */
+.header-nav {
+    display: none;
+}
+
+.header-nav__items {
+    height: 823px;
+    width: 320px;
+    right: 1px;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#292929;
+    margin: 0px;
+    font-size: 3.2rem;
+    position: absolute;
+    z-index: 1;
+}
+.nav__link {
+    color:#CDCDCD;
+    font-size: 3.2rem;
+}
+.nav__link:visited {
+    color:#CDCDCD;
+}
+
+label {
+    display: block;
+    top: 30px;
+    right: 25px;
+    order: 1;
+    position: absolute;
+    z-index: 2;
+}
+
+input {
+    display: none;
+}
+
+[for=burger]::before {
+    content: '☰';
+    font-size: 3.5rem;
+}
+
+ #burger:checked + label + nav {
+    display: block;
+    animation: show .5s ease;
+}
+#burger:checked + label::before {
+    content: '∣∣∣';
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--color-button);
+}
+
+@keyframes show {
+    0% {
+opacity: 0;
+    }
+    100% {
+opacity: 1;
+    }
+}
+
+.burger-icons {
+    font-size: 3.5rem;
+    color: #000000;
+}
+
+.header-container {
+    max-width: 100%;
+    height: 120px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav__strip {
+    width: 123px;
+}
+
+.logo {
+    margin-left: 20px;
+    position: absolute;
+    z-index: 0;
+    
+}
+
+.logo__subtitle {
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin-left: 0px;
+}
+
+/* Блок OurFriends */
+
+.our-friends {
+    max-width: 100%;
+    height: 1649px;
+}
+
+.our-friends__title {
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.pets__container {
+    flex-direction: column;
+}
+
+.charly-pet, .scarlett-pet, .freddie-pet {
+    display: none;
+}
+
+/* Блок Footer */
+
+.footer {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 809px;
+    gap: 40px;
+}
+
+br {
+    display: none;
+}
+
+.footer__second-block {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.footer__title-block {
+    text-align: center;
+    font-size: var(--text-size-h4);
+    line-height: 130%;
+}
+
+.email__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06rem;
+}
+
+.phone-number__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06rem;
+}
+
+.adress__text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.04em;
+}
+
+.footer__second-block > a {
+    justify-content: center;
+}
+
+.footer-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 }

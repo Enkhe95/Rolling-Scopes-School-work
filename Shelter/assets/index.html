@@ -7,6 +7,7 @@
     <title>Shelter</title>
     <link rel="stylesheet" href="pages/main/style.css" />
     <link rel="shortcut icon" href="./icons/favicon.svg" type="image/x-icon" />
+    <script defer src="./js/burger.js"></script>
   </head>
 
   <body>
@@ -19,11 +20,13 @@
             <h2 class="logo__subtitle">Shelter for pets in Boston</h2></a>
           </div>
 
+          <button class="header__burger-btn" id="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
 
-          <input  type="checkbox" id="burger">
-          <label for="burger"></label>
-
-          <nav class="header-nav">
+          <nav class="header-nav" id="menu">
             <ul class="header-nav__items">
               <li class="header-nav__subitems">
                 <a class="nav__link" href="#"> About the shelter <hr class="nav__strip"> </a>

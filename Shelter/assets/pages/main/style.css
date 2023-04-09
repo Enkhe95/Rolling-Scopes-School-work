@@ -121,7 +121,7 @@ input, label {
     display: none;
 }
 
-.header-nav__items {
+.header__nav_items {
     list-style-type: none;
     display: flex;
     margin-top: 46px;
@@ -129,7 +129,7 @@ input, label {
     gap: 35px;
 }
 
-.header-nav__subitems {
+.header__nav_subitems {
     color:var(--text--color);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -682,7 +682,7 @@ background-color: var(--button-color);
     margin-left: 30px;
 }
 
-.header-nav__items {
+.header__nav_items {
     margin-top: 30px;
     margin-right: 30px;
 }
@@ -813,7 +813,7 @@ background-color: var(--button-color);
 @media (max-width: 769px) {
 
 /* Блок Header */
-.header-nav {
+.header__nav {
     display: none;
 }
 
@@ -849,7 +849,7 @@ background-color: var(--button-color);
     width: 243px;
 }
 
-.header-nav__items {
+.header__nav_items {
     height: 823px;
     width: 320px;
     right: 0px;
@@ -859,11 +859,11 @@ background-color: var(--button-color);
     align-items: center;
     background-color:#292929;
     margin: 0px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
 
-.header-nav__subitems {
+.header__nav_subitems {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
@@ -874,14 +874,14 @@ background-color: var(--button-color);
 
 .header__burger-btn {
     display: block;
-    position: relative;
-    left: 270px;
+    position: absolute;
+    right: 20px;
     top: 45px;
     width: 30px;
     height: 30px;
     border:none;
     outline: none;
-    background-color:var(--hover_text-color);
+    background-color: transparent;
     cursor: url(../../img/Vector.png) 2 2, default;
     z-index: 2;
 }
@@ -892,7 +892,7 @@ background-color: var(--button-color);
     width: 30px;
     height: 2px;
     background-color: var(--background-card-donation);
-    z-index: 10;
+    z-index: 3;
     transition: .5s;
     will-change: transform;
 }
@@ -916,11 +916,14 @@ background-color: var(--button-color);
     transform: translateX(10px) rotate(90deg);
 }
 
-.header.open .header-nav {
+.header.open .header__nav {
     display: block;
+    transition: 0.5s;
 }
 
-
+.header.open .header__burger-btn {
+    background-color:transparent;
+}
 
 /* Блок Not-only */
 

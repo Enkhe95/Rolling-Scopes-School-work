@@ -7,6 +7,8 @@
     <title>Shelter</title>
     <link rel="stylesheet" href="pages/main/style.css" />
     <link rel="shortcut icon" href="./icons/favicon.svg" type="image/x-icon" />
+    <script defer src="./js/burger.js"></script>
+    <script defer src="./js/slider.js"></script>
   </head>
 
   <body>
@@ -19,22 +21,24 @@
             <h2 class="logo__subtitle">Shelter for pets in Boston</h2></a>
           </div>
 
+          <button class="header__burger-btn" name="button" id="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
 
-          <input  type="checkbox" id="burger">
-          <label for="burger"></label>
-
-          <nav class="header-nav">
-            <ul class="header-nav__items">
-              <li class="header-nav__subitems">
+          <nav class="header__nav" id="menu">
+            <ul class="header__nav_items">
+              <li class="header__nav_subitems nav">
                 <a class="nav__link" href="#"> About the shelter <hr class="nav__strip"> </a>
               </li>
-              <li class="header-nav__subitems">
+              <li class="header__nav_subitems nav">
                 <a class="nav__link" href="./pages/pets/pets.html" target="_blank">Our pets</a>
               </li>
-              <li class="header-nav__subitems">
+              <li class="header__nav_subitems nav">
                 <a class="nav__link" href="#help">Help the shelter</a>
               </li>
-              <li class="header-nav__subitems">
+              <li class="header__nav_subitems nav">
                 <a class="nav__link" href="#footer">Contacts</a>
               </li>
             </ul>
@@ -115,7 +119,7 @@
           </h2>
 
           <div class="our-friends__card">
-            <button class="button__arrow arrow-left">
+            <button class="button__arrow arrow-left" id="leftArrow">
               <img src="./icons/Arrow-left.svg" alt="arrow">
             </button>
              
@@ -139,7 +143,7 @@
             </div>
             </div>
 
-            <button class="button__arrow arrow-right">
+            <button class="button__arrow arrow-right" id="rightArrow">
               <img src="./icons/Arrow-right.svg" alt="arrow">
             </button>
           </div>

@@ -106,7 +106,7 @@ label, input {
 }
 
 
-.header-nav__items {
+.header__nav_items {
     list-style-type: none;
     display: flex;
     margin-top: 46px;
@@ -114,7 +114,7 @@ label, input {
     gap: 35px;
 }
 
-.header-nav__subitems {
+.header__nav_subitems {
     color:var(--color-text-header);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -142,11 +142,6 @@ label, input {
     transition: 0.5s;
     
 }
-
-.nav__link:visited {
-    color:black;
-}
-
 
 /* Блок Our Friiends */
 .our-friends__box {
@@ -422,11 +417,11 @@ background-color: var(--background-hr);
 @media (max-width: 768px) {
 
     /* Блок Header */
-.header-nav {
+.header__nav {
     display: none;
 }
 
-.header-nav__items {
+.header__nav_items {
     height: 823px;
     width: 320px;
     right: 1px;
@@ -444,52 +439,6 @@ background-color: var(--background-hr);
     color:#CDCDCD;
     font-size: 3.2rem;
 }
-.nav__link:visited {
-    color:#CDCDCD;
-}
-
-label {
-    display: block;
-    top: 30px;
-    right: 25px;
-    order: 1;
-    position: absolute;
-    z-index: 2;
-}
-
-input {
-    display: none;
-}
-
-[for=burger]::before {
-    content: '☰';
-    font-size: 3.5rem;
-}
-
- #burger:checked + label + nav {
-    display: block;
-    animation: show .5s ease;
-}
-#burger:checked + label::before {
-    content: '∣∣∣';
-    font-size: 3.5rem;
-    font-weight: 400;
-    color: var(--color-button);
-}
-
-@keyframes show {
-    0% {
-opacity: 0;
-    }
-    100% {
-opacity: 1;
-    }
-}
-
-.burger-icons {
-    font-size: 3.5rem;
-    color: #000000;
-}
 
 .header-container {
     max-width: 100%;
@@ -498,6 +447,7 @@ opacity: 1;
     justify-content: space-between;
     position: relative;
 }
+
 
 .nav__strip {
     width: 123px;
@@ -516,6 +466,64 @@ opacity: 1;
     letter-spacing: 0.1rem;
     margin-left: 0px;
 }
+
+.header__burger-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    width: 30px;
+    height: 30px;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: url(../../img/Vector.png) 2 2, default;
+    z-index: 2;
+}
+
+.line {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-text-header);
+    z-index: 3;
+    transition: .5s;
+    will-change: transform;
+}
+
+/* Положение иконки 180гр */
+.line:nth-child(1) {
+    transform: translateY(-10px);
+}
+.line:nth-child(3) {
+    transform: translateY(10px);
+}
+
+/* Положение иконки 90гр */
+.header.open .line:nth-child(1) {
+    transform: translateX(-10px) rotate(90deg);
+    background-color: var(--color-button);
+}
+.header.open .line:nth-child(2) {
+    transform: rotate(90deg);
+    background-color: var(--color-button);
+}
+.header.open .line:nth-child(3) {
+    transform: translateX(10px) rotate(90deg);
+    background-color: var(--color-button);
+}
+
+.header.open .header__nav {
+    display: block;
+    transition: 0.5s;
+}
+
+.header.open .header__burger-btn {
+    background-color:transparent;
+}
+
+
 
 /* Блок OurFriends */
 

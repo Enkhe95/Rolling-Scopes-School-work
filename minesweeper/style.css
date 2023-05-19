@@ -1,3 +1,29 @@
-p {
-  color: brown;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin-top: 25px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(10, 40px );
+}
+
+.title {
+  color: brown;
+  text-align: center;
+}
+
+button {
+  height: 40px;
+  font-size: 24px;
+}
+
+

@@ -9,8 +9,11 @@ page.setAttribute("class", "page");
 const box = document.createElement("div");
 box.setAttribute("class", "box");
 
+const data = document.createElement("div");
+
 const body = document.getElementById("root");
 body.appendChild(title);
+body.appendChild(data);
 body.appendChild(page);
 page.appendChild(box);
 
@@ -25,6 +28,8 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     .sort(() => Math.random() - 0.5)
     .slice(0, BOMBS_COUNT);
 
+  let flags = [];
+
   // действия при клике
   box.addEventListener("click", (event) => {
     if (event.target.tagName !== "BUTTON") {
@@ -35,6 +40,29 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     const column = index % WIDTH;
     const row = Math.floor(index / WIDTH);
     open(row, column);
+  });
+
+  box.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    if (event.target.tagName !== "BUTTON") {
+      return;
+    }
+
+    const index = cells.indexOf(event.target);
+
+    if (cells[index].disabled) {
+      return;
+    }
+
+    if (flags.includes(index)) {
+      flags = flags.filter((item) => item !== index);
+      cells[index].innerHTML = "";
+    } else {
+      flags.push(index);
+      cells[index].innerHTML = "⛳️";
+    }
+
+    data.innerHTML = numberOfBombs();
   });
 
   function getMinesCount(row, column) {
@@ -60,18 +88,28 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     } else {
       colorNumbers = "red";
     }
-    return '<span style="color: ' + colorNumbers + '">' + count + "</span>";
+    return (
+      '<span class = "number" style="color: ' +
+      colorNumbers +
+      '">' +
+      count +
+      "</span>"
+    );
   }
 
   function open(row, column) {
     const index = row * WIDTH + column;
     const cell = cells[index];
     cell.innerHTML = isBomb(row, column) ? "💣" : getMinesCount(row, column);
-    cell.disadled = true;
+    cell.disabled = true;
   }
 
   function isBomb(row, column) {
     const index = row * WIDTH + column;
     return bombs.includes(index);
+  }
+
+  function numberOfBombs() {
+    return bombs.filter((item) => !flags.includes(item)).length;
   }
 }

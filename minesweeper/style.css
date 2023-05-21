@@ -22,6 +22,12 @@
   text-align: center;
 }
 
+.new-game {
+  margin-left: 150px;
+  border-radius: 5px;
+}
+
+
 .number {
   font-size: 1em;
 }

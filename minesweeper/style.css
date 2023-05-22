@@ -7,7 +7,7 @@
 .page {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   margin-top: 25px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .dark-theme {
-  background-color:#333333;
+  background-color: #333333;
 }
 
 .dark-theme .flags-number,
@@ -50,3 +50,38 @@ button {
 }
 
 
+@media screen and (max-width: 768px) {
+  .box {
+    grid-template-columns: repeat(8, 10vw);
+  }
+
+  button {
+    height: 10vw;
+    font-size: 12px;
+  }
+
+  .new-game,
+  .flags-number,
+  .timer,
+  .click-counter {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box {
+    grid-template-columns: repeat(6, 15vw);
+  }
+
+  button {
+    height: 15vw;
+    font-size: 10px;
+  }
+
+  .new-game,
+  .flags-number,
+  .timer,
+  .click-counter {
+    font-size: 12px;
+  }
+}

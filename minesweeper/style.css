@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(10, 3vw);
+}
+
+.title {
+  color: brown;
+  text-align: center;
+}
+
+.new-game {
+  border-radius: 5px;
+}
+
+.number {
+  font-size: 1em;
+}
+
+.toggle-theme {
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.dark-theme {
+  background-color: #333333;
+}
+
+.dark-theme .flags-number,
+.dark-theme .timer,
+.dark-theme .click-counter {
+  color: white;
+}
+
+button {
+  height: 3vw;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .box {
+    grid-template-columns: repeat(8, 10vw);
+  }
+
+  button {
+    height: 10vw;
+    font-size: 12px;
+  }
+
+  .new-game,
+  .flags-number,
+  .timer,
+  .click-counter {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box {
+    grid-template-columns: repeat(6, 15vw);
+  }
+
+  button {
+    height: 15vw;
+    font-size: 10px;
+  }
+
+  .new-game,
+  .flags-number,
+  .timer,
+  .click-counter {
+    font-size: 12px;
+  }
+}

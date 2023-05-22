@@ -206,7 +206,8 @@ function startGame(width, height, bombsCount) {
         return "green";
       case 3:
         return "red";
-      // и так далее
+      case 4:
+        return "brown";
       default:
         return "black";
     }

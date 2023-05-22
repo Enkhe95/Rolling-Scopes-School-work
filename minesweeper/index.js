@@ -15,12 +15,17 @@ const newGame = document.createElement("button");
 newGame.setAttribute("class", "new-game");
 newGame.innerHTML = "New Game";
 
+const flagsNumber = document.createElement("div");
+flagsNumber.setAttribute("class", "flags-number");
+flagsNumber.innerHTML = "Flag: <span id = 'flags'></span>";
+
 const body = document.getElementById("root");
 body.appendChild(title);
 body.appendChild(data);
+body.appendChild(flagsNumber);
 body.appendChild(page);
 page.appendChild(box);
-data.appendChild(newGame);
+body.appendChild(newGame);
 
 startGame(10, 10, 10);
 function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
@@ -69,7 +74,8 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
       cells[index].innerHTML = "🚩";
     }
 
-    data.innerHTML = numberOfBombs();
+    const flag = document.getElementById("flags");
+    flag.innerHTML = numberOfBombs();
   });
 
   function isValid(row, column) {
@@ -78,7 +84,6 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
 
   function getMinesCount(row, column) {
     let count = 0;
-    let colorNumbers = "";
     for (let x = -1; x <= 1; x++) {
       for (let y = -1; y <= 1; y++) {
         if (isBomb(row + y, column + x)) {
@@ -97,7 +102,7 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     const index = row * WIDTH + column;
     const cell = cells[index];
 
-    if (cell.disabled === true) return;
+    if (cell && cell.disabled === true) return;
 
     cell.disabled = true;
 
@@ -121,7 +126,23 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     const count = getMinesCount(row, column);
     if (count !== 0) {
       cell.innerHTML = count;
+      cell.style.color = getNumberColor(count);
       return;
+    }
+
+    function getNumberColor(count) {
+      switch (count) {
+        case 1:
+          return "blue";
+        case 2:
+          return "green";
+        case 3:
+          return "red";
+        case 4:
+          return "brown";
+        default:
+          return "";
+      }
     }
 
     // Перебор всех соседних ячеек

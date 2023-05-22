@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 .page {
   display: flex;
   justify-content: center;
@@ -28,6 +27,21 @@
 
 .number {
   font-size: 1em;
+}
+
+.toggle-theme {
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.dark-theme {
+  background-color:#333333;
+}
+
+.dark-theme .flags-number,
+.dark-theme .timer,
+.dark-theme .click-counter {
+  color: white;
 }
 
 button {

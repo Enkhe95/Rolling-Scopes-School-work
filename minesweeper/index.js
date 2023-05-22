@@ -32,15 +32,24 @@ const flagSound = new Audio("sounds/flag.mp3");
 const winSound = new Audio("sounds/win.mp3");
 const loseSound = new Audio("sounds/lose.mp3");
 
+const toggleThemeButton = document.createElement("button");
+toggleThemeButton.setAttribute("class", "toggle-theme");
+toggleThemeButton.innerHTML = "Toggle Theme";
+
 const body = document.getElementById("root");
 body.appendChild(title);
 body.appendChild(data);
 body.appendChild(newGame);
+body.appendChild(toggleThemeButton);
 body.appendChild(flagsNumber);
 body.appendChild(timer);
 body.appendChild(clickCounter);
 body.appendChild(page);
 page.appendChild(box);
+
+toggleThemeButton.addEventListener("click", () => {
+  body.classList.toggle("dark-theme");
+});
 
 let WIDTH;
 let HEIGHT;

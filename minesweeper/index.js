@@ -55,6 +55,7 @@ function startGame(width, height, bombsCount) {
   let timerInterval;
   let elapsedTime = 0;
   let clickCount = 0;
+  let firstClick = true; // Переменная для отслеживания первого клика
 
   // Индексы мин
   const bombs = [...Array(cellsCount).keys()]
@@ -75,6 +76,11 @@ function startGame(width, height, bombsCount) {
 
     if (event.button === 0) {
       // Левая кнопка мыши
+      if (firstClick) {
+        // Запуск таймера только при первом клике
+        startTimer();
+        firstClick = false;
+      }
       open(row, column);
       updateClickCounter();
     } else if (event.button === 2) {
@@ -223,6 +229,5 @@ function startGame(width, height, bombsCount) {
     updateClickCounter();
   });
 
-  startTimer();
   updateFlagCounter();
 }

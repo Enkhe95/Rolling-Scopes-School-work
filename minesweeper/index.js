@@ -27,6 +27,11 @@ const clickCounter = document.createElement("div");
 clickCounter.setAttribute("class", "click-counter");
 clickCounter.innerHTML = "Clicks: <span id='clicks'>0</span>";
 
+const clickSound = new Audio("sounds/click.mp3");
+const flagSound = new Audio("sounds/flag.mp3");
+const winSound = new Audio("sounds/win.mp3");
+const loseSound = new Audio("sounds/lose.mp3");
+
 const body = document.getElementById("root");
 body.appendChild(title);
 body.appendChild(data);
@@ -41,6 +46,9 @@ let WIDTH;
 let HEIGHT;
 let BOMBS_COUNT;
 startGame(10, 10, 10);
+
+let isSoundEnabled = true;
+let gameOverSoundEnabled = true;
 
 function startGame(width, height, bombsCount) {
   WIDTH = width;
@@ -83,12 +91,14 @@ function startGame(width, height, bombsCount) {
       }
       open(row, column);
       updateClickCounter();
+      playSound(clickSound); // Воспроизведение звука при клике
     } else if (event.button === 2) {
       // Правая кнопка мыши
       event.preventDefault(); // Отменить контекстное меню
       toggleFlag(index);
       updateFlagCounter();
       updateClickCounter();
+      playSound(flagSound); // Воспроизведение звука при установке флага
     }
   });
 
@@ -131,6 +141,9 @@ function startGame(width, height, bombsCount) {
       if (result) {
         restartGame();
       }
+      if (gameOverSoundEnabled) {
+        playSound(loseSound); // Воспроизведение звука при проигрыше
+      }
       return;
     }
 
@@ -139,6 +152,9 @@ function startGame(width, height, bombsCount) {
       stopTimer();
       if (confirm("Вы выиграли! Не хотите повторить?")) {
         restartGame();
+      }
+      if (gameOverSoundEnabled) {
+        playSound(winSound); // Воспроизведение звука при выигрыше
       }
       return;
     }
@@ -222,6 +238,12 @@ function startGame(width, height, bombsCount) {
     stopTimer();
     startGame(WIDTH, HEIGHT, BOMBS_COUNT);
     updateClickCounter();
+  }
+
+  function playSound(sound) {
+    if (isSoundEnabled) {
+      sound.play();
+    }
   }
 
   newGame.addEventListener("click", () => {

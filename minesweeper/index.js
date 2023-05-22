@@ -192,6 +192,10 @@ function startGame(width, height, bombsCount) {
   }
 
   function toggleFlag(index) {
+    if (index < 0 || index >= cells.length) {
+      return;
+    }
+
     if (flags.includes(index)) {
       flags = flags.filter((item) => item !== index);
       cells[index].innerHTML = "";

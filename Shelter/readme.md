@@ -1,3 +1,3 @@
 ## link to application
 
-https://enkhe95.github.io/Shelter/assets/index.html
+https://enkhe95.github.io/Rolling-Scopes-School-work/Shelter/assets/index.html

@@ -1,3 +1,3 @@
 ## link to apllication
 
-https://enkhe95.github.io/minesweeper/index.html
+https://enkhe95.github.io/Rolling-Scopes-School-work/minesweeper/index.html

@@ -1,5 +1,4 @@
-https://www.youtube.com/watch?v=Azyxsc8XtjY
-Ссылка на видео
+[Ссылка на видео](https://www.youtube.com/watch?v=Azyxsc8XtjY)
 
 Конспект
 Hello everyone! My name is Enkhe. I'm 27 years old and I'm a junior front-end developer. I live in Ulaanbaatar, country Mongolia. Let me tell you a little bit about myself.

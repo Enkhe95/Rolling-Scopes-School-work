@@ -1,3 +1,5 @@
 # news-JS
 
-https://enkhe95.github.io/Migration-to-TypeScript/src/index.html
+link to application: 
+
+https://enkhe95.github.io/Rolling-Scopes-School-work/Migration-to-TypeScript/src/index.html

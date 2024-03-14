@@ -1,2 +1,3 @@
+## link to application
 
-https://rolling-scopes-school.github.io/enkhe95-JSFE2023Q1/Shelter/assets/index.html
+https://enkhe95.github.io/Shelter/assets/index.html
